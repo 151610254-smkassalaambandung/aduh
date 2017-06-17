@@ -18,8 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/index', 'MyContoller@index');
-Route::group(['prefix'=>'admin','middleware'=>['auth']],function() {
+Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']], function() {
 	Route::resource('authors','AuthorsController');
 	//Route diisi di sini
 });

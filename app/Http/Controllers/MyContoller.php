@@ -14,6 +14,6 @@ class MyContoller extends Controller
 
 
 
-    return view ('index');
+    return view ('indexx');
 }
 }
